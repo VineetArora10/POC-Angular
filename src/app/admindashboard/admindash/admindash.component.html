@@ -8,6 +8,7 @@
     <div class="container">
         <div *ngFor="let item of data, let i = index" class="card bg-info text-white" style="max-width: 18rem;">
             <div class="card-header"><h3>{{item.username}}</h3></div>
+            <img src="{{item.src}}" class="card-img-top">         
             <div class="card-body">
                 <h5 class="card-title">Id: {{item.id}}</h5>
                 <h5 class="card-title">Address: {{item.address}}</h5>
