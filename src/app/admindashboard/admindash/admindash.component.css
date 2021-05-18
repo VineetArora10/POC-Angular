@@ -1,0 +1,23 @@
+h3 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    margin-top: 80px;
+    width: 500px;
+    height: 370px;
+}
+
+button {
+    margin-left: 20px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+<body>
+    <div class="main-div">
+        <div class="container">
+            <h2>Users Login</h2>
+            <div class="box">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Enter User Email" [(ngModel)]="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Enter User Password"
+                        [(ngModel)]="password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" (click)="login()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

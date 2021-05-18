@@ -1,0 +1,39 @@
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ShareApp</a>
+        </div>
+    </nav>
+    <h2>Admin Dashboard</h2>
+    <div class="container">
+        <div *ngFor="let item of data, let i = index" class="card bg-info text-white" style="max-width: 18rem;">
+            <div class="card-header"><h3>{{item.username}}</h3></div>
+            <div class="card-body">
+                <h5 class="card-title">Id: {{item.id}}</h5>
+                <h5 class="card-title">Address: {{item.address}}</h5>
+                <h5 class="card-title">Phone: {{item.phone}}</h5>
+                <h5 class="card-title">Email: {{item.email}}</h5>
+                <h5 class="card-title">Password: {{item.password}}</h5>
+                <br>
+                <button class="btn btn-danger">Block</button>
+                <button class="btn btn-success">Unblock</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div *ngIf="issearched" class="card" style="width: 18rem;">
+          <!-- <img src="{{searcheduser.src}}" class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h2 class="card-title">{{searcheduser.name}}</h2>
+            <ul>
+              <li>Email:{{searcheduser.email}}</li>
+              <li>id:{{searcheduser.id}}</li>
+              <li><button (click)="add()" class="btn btn-outline-primary">Add</button></li>
+              <li><button (click)="close()" class="btn btn-outline-danger">Close</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</body>
+

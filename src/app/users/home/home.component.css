@@ -1,0 +1,19 @@
+.container{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    background: linear-gradient(100deg, #77429b, #266e6e);
+    opacity: 70%;
+    border-radius: 20px;
+}
+
+button {
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    color: black;
+    font-weight: 700;
+}

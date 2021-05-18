@@ -1,0 +1,56 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand">ShareApp</a>
+        <div class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searched">
+            <button class="btn btn-outline-success" type="submit" (click)="getsearched()">Search</button>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">  
+    <div class="row">
+        <div class="col">
+            <div class="card text-dark bg-warning profile" style="width: 18rem;">
+                <h3 class="pp">Profile</h3>
+            <div class="card-body">
+            <h2 class="card-title">{{currentuser.username}}</h2>
+            <h4>Id: {{currentuser.id}}</h4>
+            <h4>Email: {{currentuser.email}}</h4>
+            <h4>Address: {{currentuser.address}}</h4>
+            <h4>Phone: {{currentuser.phone}}</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div *ngIf="issearched" class="card text-light bg-danger" style="width: 20rem;">
+      <div class="card-body">
+        <h2 class="card-title">{{searcheduser.username}}</h2>
+        <h5>Email: {{searcheduser.email}}</h5>
+        <h5>Id: {{searcheduser.id}}</h5>
+        <button (click)="add()" class="btn btn-outline-primary">Add</button>
+        <button (click)="close()" class="btn btn-outline-success">Close</button>    
+      </div>
+    </div>
+</div>
+
+<div class="main-div">
+    <div class="container-ff">
+        <h3>Friend Requests</h3>
+        <div class="box">
+            <ul *ngFor="let item of reqlist,let i=index">
+                <li>{{item}}&nbsp;&nbsp;
+                    <button (click)="Acceptreq(i)" class="btn btn-success btn-sm">Accept</button>
+                    <button (click)="reject(i)" class="btn btn-danger btn-sm">Reject</button></li>
+            </ul>
+        </div>
+
+        <h3>Friends List</h3>
+        <div class="box">
+            <ul *ngFor="let item of friendlist">
+                <li>{{item}}</li>
+              </ul> 
+        </div>
+    </div>
+</div>
+  

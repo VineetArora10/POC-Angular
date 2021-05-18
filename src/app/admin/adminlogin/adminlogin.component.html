@@ -1,0 +1,21 @@
+<body>
+    <div class="main-div">
+        <div class="container">
+            <h2>Admin Login</h2>
+            <div class="box">
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Enter Admin Id" [(ngModel)]="eid">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Enter Admin Email" [(ngModel)]="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Enter Admin Password" [(ngModel)]="password"> 
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" (click)="adminlogin()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
