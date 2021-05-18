@@ -26,8 +26,15 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  img = null;
+  onFileSelected(event) {
+    this.img = <File>event.target.files[0].name;
+    console.log(this.img);
+  }
 
   onSubmit() {
+    this.registerForm.value.src="assets/"+`${this.img}`;
     this.registerForm.value.block=false;
     this.registerForm.value.friends=[];
     this.registerForm.value.requests=[];
