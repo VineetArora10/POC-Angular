@@ -19,21 +19,5 @@
                 <button class="btn btn-success">Unblock</button>
             </div>
         </div>
-    </div>
-
-    <div class="col">
-        <div *ngIf="issearched" class="card" style="width: 18rem;">
-          <!-- <img src="{{searcheduser.src}}" class="card-img-top" alt="..."> -->
-          <div class="card-body">
-            <h2 class="card-title">{{searcheduser.name}}</h2>
-            <ul>
-              <li>Email:{{searcheduser.email}}</li>
-              <li>id:{{searcheduser.id}}</li>
-              <li><button (click)="add()" class="btn btn-outline-primary">Add</button></li>
-              <li><button (click)="close()" class="btn btn-outline-danger">Close</button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  </div>
 </body>
-
